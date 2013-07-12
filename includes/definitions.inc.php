@@ -1217,6 +1217,13 @@ $config['os'][$os]['text']              = "Draytek";
 $config['os'][$os]['type']              = "firewall";
 $config['os'][$os]['icon']              = "draytek";
 
+$os = "netcom";
+$config['os'][$os]['text']              = "Mitsubishi NetCom";
+$config['os'][$os]['type']              = "power";
+//$config['os'][$os]['icon']              = "netcom";
+$config['os'][$os]['over'][0]['graph']  = "device_current";
+$config['os'][$os]['over'][0]['text']   = "Current";
+
 foreach ($config['os'] as $this_os => $blah)
 {
   if (isset($config['os'][$this_os]['group']))
@@ -1525,7 +1532,8 @@ $config['sensor_classes'] = array('current' => 'A',
                            'power' => 'W',
                            'voltage' => 'V',
                            'temperature' => 'C',
-                           'dbm' => 'dBm');
+                           'dbm' => 'dBm',
+                           'load' => '%');
 
 // FIXME - different icons for power/volt/current
 
@@ -1537,6 +1545,7 @@ $config['sensor_types']['power']       = array( 'symbol' => 'W',   'text' => 'Wa
 $config['sensor_types']['voltage']     = array( 'symbol' => 'V',   'text' => 'Volts',   'icon' => 'oicon-voltage');
 $config['sensor_types']['temperature'] = array( 'symbol' => 'C',   'text' => 'Celsius', 'icon' => 'oicon-thermometer-high');
 $config['sensor_types']['dbm']         = array( 'symbol' => 'dBm', 'text' => 'dBm',     'icon' => 'oicon-arrow-incident-red');
+$config['sensor_types']['load']        = array( 'symbol' => '%',   'text' => 'Percent', 'icon' => 'oicon-chart');
 
 $config['routing_types']['ospf']       = array( 'text' => 'OSPF');
 $config['routing_types']['cef']       = array( 'text' => 'CEF');

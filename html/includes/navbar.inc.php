@@ -336,7 +336,7 @@ if ($sep)
   $sep = 0;
 }
 
-foreach (array('current','frequency','power','voltage') as $item)
+foreach (array('current','frequency','power','voltage', 'load') as $item)
 {
   if ($menu_sensors[$item])
   {

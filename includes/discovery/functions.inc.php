@@ -324,6 +324,9 @@ function sensor_low_limit($class, $current)
     case 'power':
       $limit = NULL;
       break;
+    case 'load':
+      $limit = "0";
+      break;
   }
   return $limit;
 }
@@ -361,6 +364,9 @@ function sensor_limit($class, $current)
       break;
     case 'power':
       $limit = $current * 1.50;
+      break;
+    case 'load':
+      $limit = "90";
       break;
   }
   return $limit;

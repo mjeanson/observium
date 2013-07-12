@@ -106,6 +106,7 @@ include("overview/sensors/voltages.inc.php");
 include("overview/sensors/current.inc.php");
 include("overview/sensors/power.inc.php");
 include("overview/sensors/frequencies.inc.php");
+include("overview/sensors/load.inc.php");
 
 // Start events
 ?>
