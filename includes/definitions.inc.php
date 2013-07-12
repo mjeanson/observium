@@ -1217,6 +1217,13 @@ $config['os'][$os]['text']              = "Draytek";
 $config['os'][$os]['type']              = "firewall";
 $config['os'][$os]['icon']              = "draytek";
 
+$os = "netcom";
+$config['os'][$os]['text']              = "Mitsubishi NetCom";
+$config['os'][$os]['type']              = "power";
+//$config['os'][$os]['icon']              = "netcom";
+$config['os'][$os]['over'][0]['graph']  = "device_current";
+$config['os'][$os]['over'][0]['text']   = "Current";
+
 foreach ($config['os'] as $this_os => $blah)
 {
   if (isset($config['os'][$this_os]['group']))
