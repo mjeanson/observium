@@ -2,7 +2,9 @@
 // NETCOM UPS
 if ($device['os'] == 'netcom')
 {
-  $oids = snmp_walk($device, ".1.3.6.1.4.1.13891.101.2.7", "-Osqn", "NETCOM-UPS-MIB");
+  echo("NETCOM-UPS-MIB ");
+
+  $oids = snmp_walk($device, "upsBatteryTemperature", "-Osqn", "NETCOM-UPS-MIB");
   if ($debug) { echo($oids."\n"); }
   $oids = trim($oids);
   if ($oids) echo("NETCOM Battery Temperature ");
